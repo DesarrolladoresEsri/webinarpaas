@@ -1,4 +1,12 @@
-# Webinar de habilitación PaaS técnica para Business Partners de Esri Colombia, Ecuador y Panamá 2024
+# Webinar de habilitación técnica PaaS para Business Partners de Esri Colombia, Ecuador y Panamá 2024
 Este ejemplo muestra una aplicación desarrollada haciendo uso de [ArcGIS Maps SDK for JavaScript](https://developers.arcgis.com/javascript/latest/), [Calcite Design System](https://developers.arcgis.com/calcite-design-system/) y el servicio de la Plataforma como Servicio de ArcGIS [Closest facility routing](https://developers.arcgis.com/documentation/mapping-apis-and-services/routing/closest-facility-routing/)
 ## Descripción
 Este ejemplo muestra el mapa web [Telecomunicaciones S.A.](https://sersig-esri-co.maps.arcgis.com/home/item.html?id=53866cce96b24f59a76176d7d75dad64#) que contiene un servicio de capas de entidades editables que que representan activos de una empresa de telecomunicaciones. Los datos mostrados en este ejemplo son datos de prueba.
+Las capas en el web map [Telecomunicaciones S.A.](https://sersig-esri-co.maps.arcgis.com/home/item.html?id=53866cce96b24f59a76176d7d75dad64#) son:
+- Centro Administrativo
+- Armario
+- Poste
+- Cámara
+- Poste
+
+La capa **Poste** tiene una tabla relacionada **Mantenimiento Poste** que permite registrar varias actividades de mantenimiento para cada poste.
