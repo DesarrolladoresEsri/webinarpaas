@@ -7,12 +7,14 @@ Las capas en el web map [Telecomunicaciones S.A.](https://sersig-esri-co.maps.ar
 - Armario
 - Poste
 - Cámara
-- Poste
+- Poste  
 La capa **Poste** tiene una tabla relacionada **Mantenimiento Poste** que permite registrar varias actividades de mantenimiento para cada poste.  
+
 Se han agregado los siguientes widgets de [ArcGIS Maps SDK for JavaScript](https://developers.arcgis.com/javascript/latest/) a la aplicación:
 - [Lista de capas](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html): Lista cada una de las capas en wl mapa web.
 - [Galería de Mapas base](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html): Permite seleccionar un mapa base desde la galería de mapas base de ArcGIS.
 - [Marcadores](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html): Permite ir a ubicaciones en el mapa definidas previamente.
 - [Editar](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html): Permite agregar, editar y borrar atributos a las capas editables en el mapa web. Este widget se ha modificado mediante código para permitir editar únicamente la tabla relacionada **Mantenimiento Poste**
 - [Buscar](https://developers.arcgis.com/javascript/latest/api-reference/esri-webdoc-applicationProperties-Search.html): Permite encontrar direcciones y lugares por medio del servicio de geocodificación mundial de Esri.  
+
 Adicionalmente, se ha construídouna herramienta personalizada para encontrar activos cercanos. Se ha configurado en el código para encontrar Instituciones Prestadoras de Salud más cercanas a una ubicación definida por el usuario por medio de un widget [Buscar](https://developers.arcgis.com/javascript/latest/api-reference/esri-webdoc-applicationProperties-Search.html).
