@@ -8,6 +8,7 @@ Las capas en el web map [Telecomunicaciones S.A.](https://sersig-esri-co.maps.ar
 - Poste
 - Cámara
 - Poste  
+
 La capa **Poste** tiene una tabla relacionada **Mantenimiento Poste** que permite registrar varias actividades de mantenimiento para cada poste.  
 
 Se han agregado los siguientes widgets de [ArcGIS Maps SDK for JavaScript](https://developers.arcgis.com/javascript/latest/) a la aplicación:
