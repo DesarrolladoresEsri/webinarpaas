@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Servicios de Unicación ArcGIS PaaS</title>
+        <link rel="icon" type="image/x-icon" href="img/Platform.svg">
+        <script src="https://js.arcgis.com/calcite-components/2.6.0/calcite.esm.js" type="module"></script>
+        <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.6.0/calcite.css" />
+
+        <script src="https://js.arcgis.com/4.27/"></script>
+        <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/dark/main.css" />
+
+        <script type="text/JavaScript" src="js/map.js"></script>
+    </head>
+    <style>
+        .calcite-mode-dark {
+            --calcite-color-text-inverse: #FFFFFF;
+        }
+        
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        calcite-loader {
+            align-self: center;
+            justify-self: center;
+        }
+
+        #header-title {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        #info-content {
+            padding: 0.75rem;
+        }
+
+        calcite-rating {
+            margin-top: 0.25rem;
+        }
+    </style>
+    <body class="calcite-mode-dark">
+        <calcite-loader></calcite-loader>
+        <calcite-shell content-behind hidden>
+            <h2 id="header-title" slot="header">
+                <!-- Poblado dinámicamente -->
+            </h2>
+
+            <calcite-shell-panel slot="panel-start" display-mode="float">
+
+                <calcite-action-bar slot="action-bar">
+                    <calcite-action data-action-id="layers" icon="layers" text="Capas"></calcite-action>
+                    <calcite-action data-action-id="basemaps" icon="basemap" text="Mapas base"></calcite-action>
+                    <calcite-action data-action-id="bookmarks" icon="bookmark" text="Marcadores"></calcite-action>
+                    <calcite-action data-action-id="edit" icon="pencil-square" text="Editar"></calcite-action>
+                    <calcite-action data-action-id="closest-facility" icon="driving-distance" text="Instalaciones más cercanas"></calcite-action>
+                </calcite-action-bar>
+                
+                <!-- Páneles para los widgets y herramienas -->
+                <calcite-panel heading="Capas" height-scale="l" data-panel-id="layers" hidden>
+                    <div id="layers-container"></div>
+                </calcite-panel>
+                <calcite-panel heading="Mapas base" height-scale="l" data-panel-id="basemaps" hidden>
+                    <div id="basemaps-container"></div>
+                </calcite-panel>
+                <calcite-panel heading="Marcadores" height-scale="l" data-panel-id="bookmarks" hidden>
+                    <div id="bookmarks-container"></div>
+                </calcite-panel>
+                <calcite-panel heading="Editar" height-scale="l" data-panel-id="edit" hidden>
+                    <div id="edit-container"></div>
+                </calcite-panel>
+
+                <!-- Pánel Closest Facility -->
+                <calcite-panel heading="Instalaciones más cercanas" data-panel-id="closest-facility" hidden>
+                    <calcite-block heading="Descripción" description="El cálculo de ruta de instalaciones cercanas le permite encontrar una o más instalaciones cercanas a partir de un incidente. Use el buscador para definir un punto de partida."></calcite-block>
+                    <div id="closest-facility-search" style="width: auto;"></div>
+                    <calcite-block heading="Calcular" description="Una vez haya definido el punto de partida, haga clic en Ejecutar para encontrar las IPC más cercanas y ver la ruta."></calcite-block>
+                    <calcite-button data-action-id="perform-closest" icon-start="gear" slot="footer-actions" disabled="true">Ejecutar</calcite-button>
+                </calcite-panel>
+                <!-- Closest Facility -->
+            </calcite-shell-panel>
+
+            <div id="viewDiv"></div>
+
+        </calcite-shell>
+    </body>
+</html>
